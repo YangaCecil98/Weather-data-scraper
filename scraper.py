@@ -1,13 +1,16 @@
+#Importing necessary packages/libraries
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
 url = 'https://www.theweathernetwork.com/en/city/za/oos-kaap/umtata/7-days'
+#HTTP GET() Request from a server/db
 response = requests.get(url)
+#Status Request
 print(f"status_code: {response.status_code}")
 print()
 soup = BeautifulSoup(response.text, 'html.parser')
-
+#Value extracting function from the source code
 def get_value(soup, testid, remove=None):
 
     elements = soup.select(f'[data-testid = "{testid}"]')
