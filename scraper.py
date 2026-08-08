@@ -29,9 +29,9 @@ reel_feels =get_value(soup,"row-feels-like", remove="Feels")
 temperature =get_value(soup, "row-temperature", remove ="°")
 precipitation_prob =get_value(soup, "collapsed-row-pop-info")
 
-print("time_of_day:", len(time_of_day))
-print("reel_feels:", len(reel_feels))
-print("temperature:", len(temperature))
+print("time_of_day_values:", len(time_of_day))
+print("reel_feels_values:", len(reel_feels))
+print("temperature_values:", len(temperature))
 print()
 
 weather_record = {"Location":"Mthatha",
