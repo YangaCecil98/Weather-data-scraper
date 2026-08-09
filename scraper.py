@@ -43,3 +43,5 @@ weather_record = {"Location":"Mthatha",
 df = pd.DataFrame(weather_record)
 df["Feels_difference"] = df["Temperature"].astype(int) - df["Reel_feels"].astype(int)
 print(df)
+
+df.to_csv("weather-data.csv", index=False)
